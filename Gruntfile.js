@@ -234,20 +234,23 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        cssmin: {
+            uncss: { files: {'dist/styles/main.css': 'dist/styles/main.css'} }
+        },
 
         // By default, your `index.html`'s <!-- Usemin block --> will take care of
         // minification. These next options are pre-configured if you do not wish
         // to use the Usemin blocks.
-         cssmin: {
-             dist: {
-                 files: {
-                     '<%= yeoman.dist %>/styles/main.css': [
-                         '.tmp/styles/{,*/}*.css',
-                         '<%= yeoman.app %>/styles/{,*/}*.css'
-                     ]
-                 }
-             }
-         },
+        // cssmin: {
+        //     dist: {
+        //         files: {
+        //             '<%= yeoman.dist %>/styles/main.css': [
+        //                 '.tmp/styles/{,*/}*.css',
+        //                 '<%= yeoman.app %>/styles/{,*/}*.css'
+        //             ]
+        //         }
+        //     }
+        // },
         // uglify: {
         //     dist: {
         //         files: {
@@ -371,12 +374,12 @@ module.exports = function (grunt) {
         'concurrent:dist',
         'autoprefixer',
         'concat',
-        
+        'cssmin',
         'uglify',
         'copy:dist',
         'modernizr',
         'uncss:dist',
-        'cssmin',
+        'cssmin:uncss',
         'rev',
         'usemin',
         'htmlmin'
