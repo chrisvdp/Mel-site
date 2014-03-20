@@ -276,7 +276,8 @@ module.exports = function (grunt) {
                         '{,*/}*.html',
                         'styles/font/{,*/}*.*',
                         'styles/icons/awesome/{,*/}*.*',
-                        'scripts/modernizr.custom.js'
+                        'scripts/modernizr.custom.js',
+                        'CNAME'
                     ]
                 }]
             },
