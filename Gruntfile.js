@@ -316,7 +316,15 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin'
             ]
+        },
+        uncss: {
+            dist: {
+                files: {
+                    'dist/styles/main.css': ['app/index.html'],
+                }
+            }
         }
+        
     });
 
 
@@ -364,6 +372,7 @@ module.exports = function (grunt) {
         'uglify',
         'copy:dist',
         'modernizr',
+        'uncss:dist',
         'rev',
         'usemin',
         'htmlmin'
