@@ -10,4 +10,7 @@ grunt
 ```
 
 Push to git
-Merge to gh-pages
+
+```
+git subtree push --prefix dist origin gh-pages
+```
