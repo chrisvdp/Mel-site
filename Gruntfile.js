@@ -274,7 +274,8 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
-                        'styles/fonts/{,*/}*.*'
+                        'styles/font/{,*/}*.*',
+                        'icons/awesome/{,*/}*.*'
                     ]
                 }]
             },
@@ -368,7 +369,6 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('default', [
-        'newer:jshint',
         'test',
         'build'
     ]);
