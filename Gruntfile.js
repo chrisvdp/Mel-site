@@ -275,7 +275,8 @@ module.exports = function (grunt) {
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
                         'styles/font/{,*/}*.*',
-                        'styles/icons/awesome/{,*/}*.*'
+                        'styles/icons/awesome/{,*/}*.*',
+                        'scripts/modernizr.custom.js'
                     ]
                 }]
             },
