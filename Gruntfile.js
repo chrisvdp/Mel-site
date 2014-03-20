@@ -234,9 +234,6 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        cssmin: {
-            uncss: { files: {'dist/styles/main.css': 'dist/styles/main.css'} }
-        },
 
         // By default, your `index.html`'s <!-- Usemin block --> will take care of
         // minification. These next options are pre-configured if you do not wish
@@ -319,18 +316,7 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin'
             ]
-        },
-        uncss: {
-            dist: {
-                files: {
-                    'dist/styles/main.css': ['app/index.html'],
-                }
-            },
-            options: {
-                ignore: ['.withAnimation .activate']
-            }
         }
-        
     });
 
 
@@ -358,7 +344,7 @@ module.exports = function (grunt) {
             grunt.task.run([
                 'clean:server',
                 'concurrent:test',
-                'autoprefixer',
+                'autoprefixer'
             ]);
         }
 
@@ -378,8 +364,6 @@ module.exports = function (grunt) {
         'uglify',
         'copy:dist',
         'modernizr',
-        'uncss:dist',
-        'cssmin:uncss',
         'rev',
         'usemin',
         'htmlmin'
