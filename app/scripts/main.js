@@ -126,11 +126,45 @@ if ($(".googleMap").length > 0) {
 	window.onload = loadScript;
 }
 
+google.load('feeds', '1');
+
+function initialize() {
+    var feed = new google.feeds.Feed('http://littlelovedoula.wordpress.com/feed/');
+    feed.load(function(result) {
+        if (!result.error) {
+            var allFeed = '';
+            var feedLength = (result.feed.entries.length > 3) ? 3 : result.feed.entries.length;
+            for (var i = 0; i < feedLength; i++) {
+                var entry = result.feed.entries[i];
+
+                var date = entry.publishedDate.split(" ", 4); 
+                date = date[0] + ' ' + date[2] + ' ' + date[1] + ' ' + date[3];
+                
+                var feedHTML = '<div class="col-md-3 col-sm-6"><article class="blog-item">';
+                feedHTML += '<div class="entry-meta"><span class="entry-date">' + date + '</span></div>';
+                feedHTML += '<h4 class="entry-title"><a href="' + entry.link + '">' + entry.title + '</a></h4> <p>' + entry.contentSnippet + '</p>';
+                feedHTML += '</article></div>';
+                allFeed += feedHTML;
+            }
+            $('#blog-posts').replaceWith(allFeed);
+        }
+    });
+}
+google.setOnLoadCallback(initialize);
+
+function upOrDown(number){
+    var result = number % 2;
+    if(result === 0){
+        return 'Up';
+    }
+    return 'Down';
+}
+
 
 jQuery(document).ready(function () {
 	"use strict";
 	$ = jQuery.noConflict();
-
+    
 
 	/* ===================== */
 	/* ==== TIMELINE JS ==== */
