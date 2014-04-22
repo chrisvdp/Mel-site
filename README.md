@@ -3,7 +3,7 @@ Mel-site
 
 
 
-all commands that appear as code style should be run from the terminal.
+all commands that appear as `code style` should be run from the terminal.
 
 Setup (first time only)
 ---
@@ -38,8 +38,8 @@ Build the site (prep to go live)
 ```
 grunt
 ```
-grunt serve will compile the site and serve it locally. Run it if you are editing the site.
-When all changes are done and you want it to go live, run grunt and push to git.
+`grunt serve` will compile the site and serve it locally. Run it if you are editing the site.
+When all changes are done and you want it to go live, run `grunt` and push to git.
 
 Push to github
 ---
