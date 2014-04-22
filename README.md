@@ -5,9 +5,13 @@ Mel-site
 
 all commands that appear as code style should be run from the terminal.
 
-Setup
+Setup (first time only)
 ---
 install [nodejs](http://nodejs.org/)
+install grunt-cli
+```
+npm install -g grunt-cli
+```
 
 clone this repo
 
@@ -15,7 +19,7 @@ clone this repo
 git clone <clone url on the right>
 ```
 
-Install dependancies (first time only)
+Install dependancies 
 ```
 npm install
 bower install
