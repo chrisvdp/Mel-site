@@ -22,8 +22,7 @@ git clone <clone url on the right>
 
 Install dependancies 
 ```
-npm install
-bower install
+npm install && bower install
 ```
 
 Working with the site
