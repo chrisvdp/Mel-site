@@ -1,12 +1,14 @@
 Mel-site
 ========
 
-install [nodejs](http://nodejs.org/)
+
 
 all commands that appear as code style should be run from the terminal.
 
 Setup
 ---
+install [nodejs](http://nodejs.org/)
+
 clone this repo
 
 ```
