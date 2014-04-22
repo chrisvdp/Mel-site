@@ -8,6 +8,7 @@ all commands that appear as code style should be run from the terminal.
 Setup (first time only)
 ---
 install [nodejs](http://nodejs.org/)
+
 install grunt-cli
 ```
 npm install -g grunt-cli
