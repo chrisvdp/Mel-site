@@ -4,7 +4,11 @@ Mel-site
 site for mel
 
 install [nodejs](http://nodejs.org/)
+
 clone this repo
+```
+git clone <clone url on the right>
+```
 
 run and build the site
 ```
