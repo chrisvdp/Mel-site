@@ -50,5 +50,6 @@ git commit -am  "<commit message>"
 
 To push the site live run the subtree push command. The changes in the dist folder will display on the live site.
 ```
+git push
 git subtree push --prefix dist origin gh-pages
 ```
