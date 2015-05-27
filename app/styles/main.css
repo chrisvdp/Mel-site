@@ -27,3 +27,13 @@ body {
     color: #000;
     padding: 0.2em 0;
 }
+
+.priceBox em{
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.priceBox sup {
+  font-size: 10px;
+  top: -.75em;
+}
