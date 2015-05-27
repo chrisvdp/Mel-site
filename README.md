@@ -45,6 +45,7 @@ Push to github
 ---
 the commit command will not push the site live, so you can run this command for each set of changes you make. Change the commit message to reflect the changes you made, ie "updated title tag". 
 ```
+git add -A
 git commit -am  "<commit message>"
 ```
 
